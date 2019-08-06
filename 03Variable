@@ -1,0 +1,15 @@
+import tensorflow as tf
+state = tf.Variable(0)      #这句话就是声明tf变量的意思
+one=tf.constant(1)          #这句话是声明tf常量的意思
+
+new_value=tf.add(state,one)
+update=tf.assign(state,new_value)
+
+init = tf.initialize_all_variables()        #用来激活变量的手柄
+
+with tf.Session() as sess:
+    sess.run(init)
+    for i in range(3):
+        sess.run(update)
+        print(sess.run(state))
+

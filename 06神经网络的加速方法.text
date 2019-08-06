@@ -1,0 +1,3 @@
+加速神经网络的方法主要有两种:①是将训练源进行分割,分开进行训练,而不是将所有的训练源都放进去训练(SGD)
+                             ②是改变参数的优化方法,即修改weights的优化方法(Momentum,AdaGrad,RMSProp,Adam)
+                             具体是tf.train.MomentuOptimizer;tf.train.AdagradOptimizer;tf.train.RMSPropOptimizer,AdamOptimizer
